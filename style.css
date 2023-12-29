@@ -1,0 +1,48 @@
+*{
+    border: none;
+    margin: auto;
+    font-family: sans-serif;
+    color-scheme: light dark;
+}
+.title{
+    margin-top: 2%;
+    text-align: center;
+    padding: 15px 15px;
+    font-size: 35px;
+}
+.table{
+    padding-top: 3%;
+    
+}
+.bottom{
+    margin: 5%;
+    
+    text-align: center;
+}
+.bottominp{
+    background-color: white;
+    cursor: pointer;
+    color: black;
+    border-radius: 3px;
+    padding: 5px 12px;
+    margin-bottom: 1%;
+    border: solid 1px black;
+}
+tr:nth-child(even) {
+    background-color: #455353;
+    color: black;
+    
+}
+
+
+input{
+    background-color: transparent;
+}
+
+.cridit{
+    margin-top: 30px;
+
+}
+.cridit p{
+    font-size: 15px;
+}

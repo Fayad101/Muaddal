@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calc</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="script.js"></script>
+
+    <section class="title">
+        <h1>حاسبة للمعدل التراكمي</h1>
+
+    </section>
+    
+    <section class="table">
+        <table>
+            <tr>
+                <th>السنة الدراسية</th>
+                <th> الفصل االاول</th>
+                <th>الفصل الثاني </th>
+                <th>الفصل الثالث</th>    
+            </tr>
+            <tr>
+                <td> الاول الثانوي </td>
+                <td><input type="number" placeholder="ادخل قيمة" class="inp" id="1-1"></td>
+                <td><input type="number" placeholder="ادخل قيمة" class="inp" id="1-2"></td>
+                <td><input type="number" placeholder="ادخل قيمة" class="inp" id="1-3"></td>
+            </tr>
+            <tr>
+                <td>الثاني الثانوي</td>
+                <td><input type="number" placeholder="ادخل قيمة" class="inp" id="2-1"></td>
+                <td><input type="number" placeholder="ادخل قيمة" class="inp" id="2-2"></td>
+                <td><input type="number" placeholder="ادخل قيمة" class="inp" id="2-3"></td>
+            </tr>
+            <tr>
+                <td>الثالث الثانوي</td>
+                <td><input type="number" placeholder="ادخل قيمة" class="inp" id="3-1"></td>
+                <td><input type="number" placeholder="ادخل قيمة" class="inp" id="3-2"></td>
+                <td><input type="number" placeholder="ادخل قيمة" class="inp" id="3-3"></td>
+            </tr>
+
+        </table>
+    </section>
+    <section class="bottom">
+        <input type="button" value="احسب" class="bottominp" onclick="CalcScore()">
+    
+        <h1>المعدل التراكمي : <span id="Pout"> 0.00</span>%</h1>
+        <section class="cridit">
+            <p>توجيه من: أ. سالم السويداء</p>
+            <p >عمل الطالب: فياض عادل الحميدي</p>
+
+        </section>
+    </section>
+
+</body>
+</html>
