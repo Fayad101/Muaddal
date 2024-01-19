@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" id="theme-style">
+    <title>Riyadh High School</title>
+</head>
+<body>
+    <header>
+        <img src="logo_dark.png" alt="School Logo" id="school-logo">
+        <p>Empowering Minds, Building Futures</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home" data-translate="Home">Home</a></li>
+            <li><a href="#about" data-translate="About Us">About Us</a></li>
+            <li><a href="#courses" data-translate="Courses">Courses</a></li>
+            <li><a href="#contact" data-translate="Contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h2 data-translate="Home">Home</h2>
+        <p data-translate="Welcome to our school's official website. Explore and discover the opportunities that await you.">
+            Welcome to our school's official website. Explore and discover the opportunities that await you.
+        </p>
+        <div id="table-container">
+            <!-- Initially, only one table is visible -->
+            <div id="table-4x4" class="table">
+                <table>
+                    <tr>
+                        <th>The Year</th>
+                        <th>Term 1</th>
+                        <th>Term 2</th>
+                        <th>Term 3</th>
+                    </tr>
+                    <tr>
+                        <th>Year1</th>
+                        <td><input inputmode="numeric" pattern="[0-9]+" type="number" id="input-4-1"  oninput="validateInput(this)"></td>
+                        <td><input inputmode="numeric" pattern="[0-9]+" type="number" id="input-4-2"  oninput="validateInput(this)"></td>
+                        <td><input inputmode="numeric" pattern="[0-9]+" type="number" id="input-4-3"  oninput="validateInput(this)"></td>
+                    </tr>
+                    <tr>
+                        <th>Year2</th>
+                        <td><input inputmode="numeric" pattern="[0-9]+" type="number" id="input-4-4"  oninput="validateInput(this)"></td>
+                        <td><input inputmode="numeric" pattern="[0-9]+" type="number" id="input-4-5"  oninput="validateInput(this)"></td>
+                        <td><input inputmode="numeric" pattern="[0-9]+" type="number" id="input-4-6"  oninput="validateInput(this)"></td>
+                    </tr>
+                    <tr>
+                        <th>Year3</th>
+                        <td><input inputmode="numeric" pattern="[0-9]+" type="number" id="input-4-7"  oninput="validateInput(this)"></td>
+                        <td><input inputmode="numeric" pattern="[0-9]+" type="number" id="input-4-8"  oninput="validateInput(this)"></td>
+                        <td><input inputmode="numeric" pattern="[0-9]+" type="number" id="input-4-9"  oninput="validateInput(this)"></td>
+                    </tr>
+                </table>
+            </div>
+    
+            <!-- Hidden initially -->
+            <div id="table-2x3" class="table">
+                <table>
+                    <tr>
+                        <th>Year1</th>
+                        <th>Year2</th>
+                        <th>Year3</th>
+                    </tr>
+                    <tr>
+                        <td><input inputmode="numeric" pattern="[0-9]+" type="number" id="input-2-1"  oninput="validateInput(this)" ></td>
+                        <td><input inputmode="numeric" pattern="[0-9]+" type="number" id="input-2-2"  oninput="validateInput(this)"></td>
+                        <td><input inputmode="numeric" pattern="[0-9]+" type="number" id="input-2-3"  oninput="validateInput(this)"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+        <button onclick="toggleTable()">Toggle Table</button>
+    
+        <script src="script.js"></script>
+    
+    </section>
+
+    <section id="about">
+        <h2 data-translate="About Us">About Us</h2>
+        <p data-translate="Learn about our school's history, mission, and commitment to education excellence.">
+            Learn about our school's history, mission, and commitment to education excellence.
+        </p>
+    </section>
+
+    <section id="courses">
+        <h2 data-translate="Courses">Courses</h2>
+        <p data-translate="Discover the diverse range of courses we offer to help you achieve your academic and career goals.">
+            Discover the diverse range of courses we offer to help you achieve your academic and career goals.
+        </p>
+    </section>
+
+    <section id="contact">
+        <h2 data-translate="Contact">Contact</h2>
+        <p data-translate="Get in touch with us for any inquiries or to schedule a visit to our school.">
+            Get in touch with us for any inquiries or to schedule a visit to our school.
+        </p>
+    </section>
+
+    <footer>
+        <p data-translate="&copy; 2024 Our School. All rights reserved.">&copy; 2024 Our School. All rights reserved.</p>
+    </footer>
+
+    <button class="theme-toggle-button" onclick="toggleTheme()">Toggle Theme</button>
+    <button class="language-toggle-button" onclick="toggleLanguage()">Toggle Language</button>
+
+    <script>
+        // Check if the user prefers a dark color scheme
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        // Set the default theme based on user preferences
+        document.getElementById('theme-style').setAttribute('href', prefersDark ? 'styles-dark.css' : 'styles.css');
+
+        function toggleTheme() {
+            // Toggle between light and dark themes
+            const currentTheme = document.getElementById('theme-style').getAttribute('href');
+            const lightTheme = 'styles.css';
+            const darkTheme = 'styles-dark.css';
+
+            if (currentTheme === lightTheme) {
+                document.getElementById('theme-style').setAttribute('href', darkTheme);
+            } else {
+                document.getElementById('theme-style').setAttribute('href', lightTheme);
+            }
+        }
+
+        function toggleLanguage() {
+            // Toggle between English and Arabic
+            const currentLang = document.documentElement.lang;
+            const newLang = currentLang === 'en' ? 'ar' : 'en';
+            const pageUrl = newLang === 'ar' ? 'index.html' : 'index-en.html';
+            window.location.href = pageUrl;
+        }
+
+        function validateInput(input) {
+      // Remove non-numeric characters from the input value
+      input.value = input.value.replace(/\D/g, '');
+    }
+    
+    </script>
+
+</body>
+</html>
