@@ -48,6 +48,14 @@ header p {
     max-height: 160px;
     transition: 0.4s;
 }
+.tweets-container{
+    display: block;
+    align-self: center;
+    align-items: center;
+}
+.twitter-tweet{
+    margin: auto;
+}
 .lang{
     padding-top: 10px;
     padding-bottom: 5px;
