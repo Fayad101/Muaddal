@@ -11,10 +11,10 @@ function toggleTable() {
   }
 }
 // Replace these values with your Twitter API credentials
-const apiKey = 'DtP0td7FA5DlTm0tePkN5HSy4';
-const apiSecretKey = 'd4QSXmZXC7ujr71G19DcllKu6hZ0hQc2cEojBqj3Y2A5vgRJKT';
-const accessToken = '1752619267516739584-CHaMughGdSn1aXoVF4fsYpGoeV4sGy';
-const accessTokenSecret = 'myj3vbQWBmA6rpLulnFElrUrBstrcQDtAk5HBYInxIKaL';
+const apiKey = 'i1NhBsXhnEGNhzUGwitL2VLuE';
+const apiSecretKey = '5mRBhRXr3ao2pGOQUmsfB8N3jWuWtHgLG22oatxBUSbCFFUaQ4';
+const accessToken = '1752619267516739584-FXMX2s8bBNBDeC4E4uq0FcKxJVtGfM';
+const accessTokenSecret = 'hsUXAwpBuWhJnmENvNjFA2dhiy7JZxIScu7s3JccHDkk1';
 const screenName = 'MOE_RYH_07_1461'; 
 
 const tweetCount = 2; // change the number of tweets to fetch
