@@ -221,6 +221,14 @@ td input {
         cursor: pointer;
         transition: transform 0.5s;
     }
+	.tweets-container{
+    display: block;
+    align-self: center;
+    align-items: center;
+}
+.twitter-tweet{
+    margin: auto;
+}
 
 
     .menu-toggle.open {
