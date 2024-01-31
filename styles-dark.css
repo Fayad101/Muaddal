@@ -1,49 +1,109 @@
-
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #262626;
-    color: #333;
+    color: #ffffff;
     transition: background-color 0.5s, color 0.5s;
 }
 
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:rgb(40, 64, 90);
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 5px 5px 10px #1d1d1d;
+    font-size: 30px;
+}
+.circle-half-stroke{
+    font-size: 130%;
+}
+
 header {
-    background-color: #2c3e50;
+    background-image: linear-gradient(64deg, rgb(41, 64, 80),rgb(50, 64, 90), rgb(41, 64, 80));
     color: aliceblue;
     text-align: center;
     position: relative;
-    padding: 20px;transition: 0.4s;
-}
-
-#school-logo {
-    content: url('darklogo.png'); /* Change the path to your dark theme logo */
-    max-width: 50%; /* Make sure the logo doesn't exceed the container width */
-    height: auto; /* Maintain the aspect ratio of the logo */
-    display: block; /* Center the logo within the header */
-    margin: 0 auto 10px; /* Add margin for spacing between logo and text */
-    max-height: 150px;
+    padding: 20px;
     transition: 0.4s;
 }
 
+header p {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+#school-logo {
+    content: url('darklogo.png');
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+    max-height: 160px;
+    transition: 0.4s;
+}
+.lang{
+    padding-top: 10px;
+    padding-bottom: 5px;
+    margin-top: -50px;
+    padding-inline-end: 3px;
+
+
+    display: block;
+    text-align: center;
+    border:none;
+    align-self:auto;
+
+    max-width: 30%;
+    margin-right: 95%;
+
+
+    background-color: #ddd;
+    color: #333;
+    box-shadow: #262626 3px 3px 5px;
+    border-radius: 3px;
+    cursor: pointer;
+
+    transition: 1s;
+
+}
+.lang:hover{
+    font-size: 30px;
+    transition: 1s;
+}
+.lang p{
+    font-size: 14px;
+    font-weight: 400;
+
+}
+.lang i{
+    color: #2980b9;
+    padding-top: 5px;
+}
 nav {
-    background-color: #2c3e50;
+    background-color: transparent;
     color: #fff;
     padding: 10px;
-    
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    text-align: center; /* Center the navigation links on normal-sized screens */
+    text-align: center;
 }
 
 nav ul li {
     display: inline;
     margin-right: 10px;
 }
+
 nav a {
     text-decoration: none;
     color: #fff;
@@ -51,100 +111,37 @@ nav a {
 
 section {
     margin: 20px;
-    background-color:transparent;
+    background-color: transparent;
     color: #f8f8f8;
-    
 }
-table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  th, td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: center;
-  }
-  
-  th {
-    background-color: #353535;
-  }
-  
-  #table-2x3 {
-    display: none; /* Initially hidden */
-  }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
 
-  th, td {
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: center;
-  }
-  td input{
+}
+
+th {
+    background-color: #353535;
+}
+
+td input {
     background-color: transparent;
     padding: 3px;
     border: none;
-  }
-  @media (max-width: 600px) {
+}
+
+@media (max-width: 600px) {
     th, td {
-      font-size: 12px;
-    }
-  }
-  
-footer {
-    background-color: #34495e;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-.theme-toggle-button,
-.language-toggle-button {
-    background-color: #0e2636;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.theme-toggle-button:hover,
-.language-toggle-button:hover {
-    background-color: #2980b9;
-}
-
-/* Media query for smaller screens */
-@media only screen and (max-width: 600px) {
-
-    header {
-        padding: 10px; /* Adjust header padding for smaller screens */
+        font-size: 12px;
     }
 
-    nav {
-        padding: 5px; /* Adjust navigation padding for smaller screens */
-    }
-
-    nav ul li {
-        display: block; /* Display the list items as block elements on smaller screens */
-        margin: 0; /* Remove margin for better spacing on smaller screens */
-    }
-
-    .theme-toggle-button,
-    .language-toggle-button {
-        padding: 8px 15px; /* Adjust button padding for smaller screens */
-        font-size: 14px; /* Adjust button font size for smaller screens */
-    }
-    
-}
-@media only screen and (max-width: 600px) {
-    header {
+    header, nav {
         padding: 10px;
     }
 
@@ -154,9 +151,14 @@ footer {
     }
 
     nav ul li {
-        display: block; /* Display the list items as blocks on smaller screens */
+        display: block;
         margin-right: 0;
         margin-bottom: 10px;
+    }
+
+    .theme-toggle-button, .language-toggle-button {
+        padding: 8px 15px;
+        font-size: 14px;
     }
 
     section {
@@ -168,7 +170,85 @@ footer {
     }
 
     td input {
-        min-height: 25px; /* Adjust height for smaller screens */
-        width: 100%; /* Full width for smaller screens */
+        min-height: 25px;
+        width: 100%;
+    }
+    
+    nav {
+        padding: 0;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: -250px; /* Start off-screen */
+        background-color: #2c3e50;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-left: 30px;
+    }
+
+    nav ul {
+        display: block;
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    nav ul li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    nav a {
+        display: block;
+        padding: 10px;
+        color: #fff;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+        background-color: #2980b9;
+    }
+
+
+
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+        transition: transform 0.5s;
+    }
+
+
+    .menu-toggle.open {
+        transform: rotate(90deg);
+    }
+    .lang{
+        padding: 0;
+        margin: 0;
+        padding: 20px;
+        margin-right: 30px;
+        margin-top: 20px;
+        max-width: fit-content;
+        max-height: fit-content;
+        font-size: 20px;
+    }
+    .lang:hover{
+        font-size: 30px;
+
+    }
+    .lang p{
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+}
+@media only screen and (min-width: 601px) {
+    .menu-toggle {
+        display: none;
     }
 }
