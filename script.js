@@ -15,7 +15,7 @@ const apiKey = 'DtP0td7FA5DlTm0tePkN5HSy4';
 const apiSecretKey = 'd4QSXmZXC7ujr71G19DcllKu6hZ0hQc2cEojBqj3Y2A5vgRJKT';
 const accessToken = '1752619267516739584-CHaMughGdSn1aXoVF4fsYpGoeV4sGy';
 const accessTokenSecret = 'myj3vbQWBmA6rpLulnFElrUrBstrcQDtAk5HBYInxIKaL';
-const screenName = 'https://api.twitter.com/2/tweets?screen_name=MOE_RYH_07_1461&count=2'; 
+const screenName = 'https://twitter.com/MOE_RYH_07_1461'; 
 
 const tweetCount = 2; // change the number of tweets to fetch
 
