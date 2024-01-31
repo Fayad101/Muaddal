@@ -4,146 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" id="theme-style">
-    <title>صفحة المدرسة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>الرئيسية</title>
 </head>
 <body>
     <header>
         <img src="logo_dark.png" alt="School Logo" id="school-logo">
-        <p>تطوير العقول، بناء المستقبل.</p>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="#home" data-translate="Home">الرئيسية</a></li>
-            <li><a href="#about" data-translate="About Us">من نحن</a></li>
-            <li><a href="#courses" data-translate="Courses">الدورات</a></li>
-            <li><a href="#contact" data-translate="Contact">اتصل بنا</a></li>
-        </ul>
-    </nav>
-
-    <section id="home">
-        <h2 data-translate="Home">الرئيسية</h2>
-        <p data-translate="Welcome to our school's official website. Explore and discover the opportunities that await you.">
-            مرحبًا بك في موقع مدرستنا.اكتشف الفرص التي تنتظرك.
-            <br>
-            (هذا الموقع تجريبي ) 
-        </p>
-
-        
-        <div id="table-container">
-            <!-- Initially, only one table is visible -->
-            <div id="table-4x4" class="table">
-                <table>
-                    <tr>
-                        <th>السنة</th>
-                        <th>الفصل الاول</th>
-                        <th>الفصل الثاني</th>
-                        <th>الفصل الثالث</th>
-                    </tr>
-                    <tr>
-                        <th>الاول الثانوي</th>
-                        <td><input inputmode="numeric" pattern="[0-9]+" type="number" id="input-4-1"  oninput="validateInput(this)"></td>
-                        <td><input inputmode="numeric" pattern="[0-9]+" type="number" id="input-4-2"  oninput="validateInput(this)"></td>
-                        <td><input inputmode="numeric" pattern="[0-9]+" type="number" id="input-4-3"  oninput="validateInput(this)"></td>
-                    </tr>
-                    <tr>
-                        <th>الثاني الثانوي</th>
-                        <td><input inputmode="numeric" pattern="[0-9]+" type="number" id="input-4-4"  oninput="validateInput(this)"></td>
-                        <td><input inputmode="numeric" pattern="[0-9]+" type="number" id="input-4-5"  oninput="validateInput(this)"></td>
-                        <td><input inputmode="numeric" pattern="[0-9]+" type="number" id="input-4-6"  oninput="validateInput(this)"></td>
-                    </tr>
-                    <tr>
-                        <th>الثالث الثانوي</th>
-                        <td><input inputmode="numeric" pattern="[0-9]+" type="number" id="input-4-7"  oninput="validateInput(this)"></td>
-                        <td><input inputmode="numeric" pattern="[0-9]+" type="number" id="input-4-8"  oninput="validateInput(this)"></td>
-                        <td><input inputmode="numeric" pattern="[0-9]+" type="number" id="input-4-9"  oninput="validateInput(this)"></td>
-                    </tr>
-                </table>
+        <p>تطوير العقول </p>
+        <nav>
+            <ul class="Main-Buttons"></ul>
+            <ul>
+                <li><a href="#home" data-translate="Home">الرئيسية</a></li>
+                <li><a href="#about" data-translate="About Us">حاسبات</a></li>
+                <li><a href="#courses" data-translate="Courses">عن الثانوية</a></li>
+                <li><a href="#contact" data-translate="Contact">عنّا</a></li>
+            </ul>
+            <div class="lang" onclick="toggleLanguage()">
+                <i class="fa-solid fa-language"></i>
+                <p>غير اللغة</p>
             </div>
-                        <!-- Hidden initially -->
-                        <div id="table-2x3" class="table">
-                            <table>
-                                <tr>
-                                    <th>السنة الاولى</th>
-                                    <th>السنة الثانية</th>
-                                    <th>Year3</th>
-                                </tr>
-                                <tr>
-                                    <td><input inputmode="numeric" pattern="[0-9]+" type="number" id="input-2-1"  oninput="validateInput(this)" ></td>
-                                    <td><input inputmode="numeric" pattern="[0-9]+" type="number" id="input-2-2"  oninput="validateInput(this)"></td>
-                                    <td><input inputmode="numeric" pattern="[0-9]+" type="number" id="input-2-3"  oninput="validateInput(this)"></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                
-            <button onclick="toggleTable()">غير المدخلات</button>
-    
-            <script src="script.js"></script>
-    
-    </section>
 
-    <section id="about">
-        <h2 data-translate="About Us">من نحن</h2>
-        <p data-translate="Learn about our school's history, mission, and commitment to education excellence.">
-            تعرف على تاريخ مدرستنا، رسالتنا، والتفاني في تحقيق التميز التعليمي.
-        </p>
-    </section>
+        </nav>
+    </header>
+    <main>
+        <div class="News">
+            <h1>أخبار عن الثانوية</h1>
+            
+        <div class="container">
+         <h1>Twitter Feed</h1>
+         <div id="tweets-container"></div>
+        </div>
+    </main>
+    <a href="#" class="float" onclick="toggleTheme()">
+        <div class="circle-half-stroke">
+            <i class="fa-solid fa-circle-half-stroke"></i>
+        </div>
 
-    <section id="courses">
-        <h2 data-translate="Courses">الدورات</h2>
-        <p data-translate="Discover the diverse range of courses we offer to help you achieve your academic and career goals.">
-            اكتشف مجموعة متنوعة من الدورات التي نقدمها لمساعدتك في تحقيق أهدافك الأكاديمية والمهنية.
-        </p>
-    </section>
-
-    <section id="contact">
-        <h2 data-translate="Contact">اتصل بنا</h2>
-        <p data-translate="Get in touch with us for any inquiries or to schedule a visit to our school.">
-            تواصل معنا للحصول على أي استفسار أو لتحديد زيارة إلى مدرستنا.
-        </p>
-    </section>
-
-
-
-
+    </a>
     <button class="theme-toggle-button" onclick="toggleTheme()">تغيير السمة</button>
     <button class="language-toggle-button" onclick="toggleLanguage()">تغيير اللغة</button>
 
     <script>
-        // Check if the user prefers a dark color scheme
         const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-        // Set the default theme based on user preferences
         document.getElementById('theme-style').setAttribute('href', prefersDark ? 'styles-dark.css' : 'styles.css');
 
         function toggleTheme() {
-            // Toggle between light and dark themes
             const currentTheme = document.getElementById('theme-style').getAttribute('href');
             const lightTheme = 'styles.css';
             const darkTheme = 'styles-dark.css';
 
-            if (currentTheme === lightTheme) {
-                document.getElementById('theme-style').setAttribute('href', darkTheme);
-            } else {
-                document.getElementById('theme-style').setAttribute('href', lightTheme);
-            }
+            document.getElementById('theme-style').setAttribute('href', currentTheme === lightTheme ? darkTheme : lightTheme);
         }
 
         function toggleLanguage() {
-            // Toggle between English and Arabic
             const currentLang = document.documentElement.lang;
             const newLang = currentLang === 'en' ? 'ar' : 'en';
-            const pageUrl = newLang === 'ar' ? 'index.html' : 'index-en.html';
-            window.location.href = pageUrl;
+            window.location.href = newLang === 'ar' ? 'index.html' : 'index-en.html';
         }
 
         function validateInput(input) {
-      // Remove non-numeric characters from the input value
-      input.value = input.value.replace(/\D/g, '');
-    }
-    
-    </script>
+            input.value = input.value.replace(/\D/g, '');
+        }
 
+        window.addEventListener('scroll', function() {
+            var logo = document.getElementById('school-logo');
+            var header = document.querySelector('header');
+            var newSize = 100 - window.scrollY * 0.1;
+            newSize = newSize < 50 ? 50 : newSize;
+            newSize = Math.max(newSize, 10);
+            logo.style.maxWidth = newSize + '%';
+            logo.style.maxHeight = '100px';
+            logo.style.minHeight = '100px';
+            header.style.padding = (20 - window.scrollY * 0.05) + 'px';
+        });
+
+        var textUnderLogo = document.querySelector('header p');
+        if (textUnderLogo) {
+            textUnderLogo.style.transition = 'opacity 2s';
+            setTimeout(function() {
+                textUnderLogo.style.opacity = '0';
+                setTimeout(function() {
+                    textUnderLogo.textContent = 'بناء المستقبل';
+                    textUnderLogo.style.opacity = '1';
+                    setTimeout(function() {
+                        textUnderLogo.style.opacity = '0';
+                        textUnderLogo.addEventListener('transitionend', function() {
+                            textUnderLogo.remove();
+                        });
+                    }, 5000);
+                }, 500);
+            }, 5000);
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+    const nav = document.querySelector('nav');
+    const menuToggle = document.createElement('div');
+    menuToggle.className = 'menu-toggle';
+    menuToggle.innerHTML = '&#9776;'; // Unicode for hamburger icon
+    document.body.appendChild(menuToggle);
+
+    menuToggle.addEventListener('click', function() {
+        const isOpen = nav.style.left === '0px' || nav.style.left === '';
+
+        if (isOpen) {
+            nav.style.left = '-250px';
+            menuToggle.classList.remove('open');
+            menuToggle.innerHTML = '&#9776;'; // Revert to hamburger icon
+        } else {
+            nav.style.left = '0px';
+            menuToggle.classList.add('open');
+            menuToggle.innerHTML = '&#10006;'; // Unicode for "x" symbol
+        }
+    });
+});
+
+
+    </script>
 </body>
 </html>
